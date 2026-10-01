@@ -1,0 +1,152 @@
+{
+  "judge_model": "gemini-3.5-flash-lite",
+  "metrics": {
+    "route_accuracy": 1.0,
+    "answer_correctness": 1.0,
+    "answer_relevance": 1.0,
+    "faithfulness": 1.0,
+    "retrieval_accuracy": 0.8690476190476191,
+    "overall": 0.9738095238095237,
+    "completed_tests": 5,
+    "total_tests": 12,
+    "failed_tests": 7
+  },
+  "results": [
+    {
+      "id": "U01",
+      "question": "How many annual leave days are employees entitled to per year?",
+      "expected_route": "unstructured",
+      "actual_route": "unstructured",
+      "route_correct": true,
+      "answer": "Employees are eligible for 25 working days of Annual Leave per year (Analysts can refer to the analyst program details for their eligibility).",
+      "status": "COMPLETED",
+      "answer_correctness": 1.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 1.0,
+      "retrieval_accuracy": 1.0,
+      "latency_seconds": 17.76,
+      "judge_reasoning": "The system accurately states that employees are eligible for 25 working days of annual leave per year, matching the expected answer and fully supported by Document 1. It directly answers the user's question without adding any unsupported assumptions.",
+      "documents_retrieved": 4
+    },
+    {
+      "id": "U02",
+      "question": "How many days of annual leave can be carried forward?",
+      "expected_route": "unstructured",
+      "actual_route": "unstructured",
+      "route_correct": true,
+      "answer": "You may carry up to 50 days of Annual Leave to the next financial year.",
+      "status": "COMPLETED",
+      "answer_correctness": 1.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 1.0,
+      "retrieval_accuracy": 1.0,
+      "latency_seconds": 18.72,
+      "judge_reasoning": "The system answer correctly identifies that up to 50 days of annual leave can be carried forward, matching both the expected answer and the retrieved document context.",
+      "documents_retrieved": 4
+    },
+    {
+      "id": "U03",
+      "question": "What are the rules for taking sabbatical leave?",
+      "expected_route": "unstructured",
+      "actual_route": "unstructured",
+      "route_correct": true,
+      "answer": "Based on the provided document, the rules for taking sabbatical leave are:\n\n* **Notice Period:** A notice of at least six months (and ideally one year) prior to taking sabbatical is required.\n* **Eligibility:** Only those who have completed five years with the firm are eligible.\n* **Frequency:** Such leave can be taken only once in a continuous period of five years.\n* **Compensation:** The sabbatical is 100% paid for by the firm, except for Vice Presidents and above, for whom it is 50% paid (the same guidelines apply to the incentive payout for the sabbatical period).\n* **Process:** If you are interested in sabbatical leave, please discuss it with your Supervisor and HR.\n* **Continuity of Service:** Your continuity of service will remain as-is during the period of sabbatical leave.\n* **Courses:** If you want to pursue a course which requires you to be away for more than six months, please discuss it with your supervisor/HR.\n* **Combining Leaves:** You can combine your annual leave with the sabbatical.",
+      "status": "COMPLETED",
+      "answer_correctness": 1.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 1.0,
+      "retrieval_accuracy": 0.7619047619047619,
+      "latency_seconds": 20.61,
+      "judge_reasoning": "The system answer covers all the necessary rules for sabbatical leave provided in the ground truth and retrieved context. It is completely correct, directly addresses the user question, and is fully supported by the supplied document.",
+      "documents_retrieved": 4
+    },
+    {
+      "id": "U04",
+      "question": "What is the maximum monthly mobile reimbursement?",
+      "expected_route": "unstructured",
+      "actual_route": "unstructured",
+      "route_correct": true,
+      "answer": "The maximum monthly mobile reimbursement is up to INR 1500 per month if the mobile phone is used for business needs.",
+      "status": "COMPLETED",
+      "answer_correctness": 1.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 1.0,
+      "retrieval_accuracy": 0.7142857142857143,
+      "latency_seconds": 18.74,
+      "judge_reasoning": "The system answer correctly identifies the maximum monthly mobile reimbursement as INR 1500 per month for business needs, which directly matches both the expected answer and the provided document context.",
+      "documents_retrieved": 4
+    },
+    {
+      "id": "S01",
+      "question": "How many days of leave did Lisa Smith take?",
+      "expected_route": "structured",
+      "actual_route": "structured",
+      "route_correct": true,
+      "answer": "Lisa Smith took a total of 3 days of leave.",
+      "status": "COMPLETED",
+      "answer_correctness": 1.0,
+      "answer_relevance": 1.0,
+      "faithfulness": 1.0,
+      "retrieval_accuracy": null,
+      "latency_seconds": 8.5,
+      "judge_reasoning": "The system answer perfectly matches the expected answer, directly addresses the user question, and is fully supported by the provided database result.",
+      "documents_retrieved": 0
+    },
+    {
+      "id": "S02",
+      "question": "Which employees are in the Engineering department?",
+      "expected_route": "structured",
+      "status": "QUOTA_EXCEEDED",
+      "error": "Error calling model 'gemini-3.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 39.791667821s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '39s'}]}}",
+      "latency_seconds": 41.78
+    },
+    {
+      "id": "S03",
+      "question": "Who has the most leave remaining?",
+      "expected_route": "structured",
+      "status": "QUOTA_EXCEEDED",
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 39.349527532s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '39s'}]}}",
+      "latency_seconds": 1.21
+    },
+    {
+      "id": "H01",
+      "question": "What is the annual leave entitlement according to company policy, and how many leaves does Lisa Smith have remaining?",
+      "expected_route": "hybrid",
+      "status": "QUOTA_EXCEEDED",
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 38.254635352s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '38s'}]}}",
+      "latency_seconds": 0.3
+    },
+    {
+      "id": "H02",
+      "question": "What is the company's mobile reimbursement limit, and how much leave does Lisa Smith have remaining?",
+      "expected_route": "hybrid",
+      "status": "QUOTA_EXCEEDED",
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 38.000469883s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '38s'}]}}",
+      "latency_seconds": 0.26
+    },
+    {
+      "id": "H03",
+      "question": "What is the annual leave entitlement according to company policy, and how many leaves does Lisa Smith have remaining?",
+      "expected_route": "hybrid",
+      "status": "QUOTA_EXCEEDED",
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 37.702534291s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '37s'}]}}",
+      "latency_seconds": 0.29
+    },
+    {
+      "id": "G01",
+      "question": "What is an API?",
+      "expected_route": "general",
+      "status": "QUOTA_EXCEEDED",
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 37.33624802s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '37s'}]}}",
+      "latency_seconds": 0.69
+    },
+    {
+      "id": "G02",
+      "question": "What is the capital of France?",
+      "expected_route": "general",
+      "status": "QUOTA_EXCEEDED",
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 36.68973726s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '36s'}]}}",
+      "latency_seconds": 0.32
+    }
+  ]
+}
