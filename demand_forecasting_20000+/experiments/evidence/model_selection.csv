@@ -1,0 +1,6 @@
+Model,Predictive_Score,Generalization_Score,Final_Score
+XGBoost - Log Target,1.0,1.0,1.0
+Random Forest - Original,2.4,3.0,2.64
+CatBoost - Log Target,3.6,2.0,2.96
+XGBoost - Original,3.0,4.666666666666667,3.666666666666667
+CatBoost - Original,5.0,4.333333333333333,4.733333333333333
